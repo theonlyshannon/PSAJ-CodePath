@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+  }
+
+  body {
+    padding-top: 9rem;
+}
+
+  nav,
+  .navbar {
+    padding: 24px 80px;
+    box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    padding-left: 0;
+    margin-right: auto;
+  }
+
+  .navbar-brand img {
+    max-height: 90px;
+  }
+
+  .navbar-nav {
+    flex-grow: 0;
+    margin-left: auto;
+  }
+
+  .nav-item {
+    margin: 0 0.5rem;
+    color: #141B2A;
+    position: relative;
+  }
+
+  .nav-link {
+    color: #141B2A;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-link:hover {
+    color: #135155;
+  }
+  .btn-custom {
+    background-color: #2F4157;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 12px 18px;
+  }
+  .btn-custom:hover {
+    background-color: #7892B0;
+    color: white;
+  }
+/* Hero Section */
+.hero {
+    background-color: #A7C7E7;
+    padding: 4rem 2rem;
+    text-align: center;
+    height: 350px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+
+
+.article-section {
+    padding: 3rem 0;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-sidebar {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.category-badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.tag-badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.writer-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.writer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.writer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.writer-name {
+    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.writer-role {
+    color: #6c757d;
+    font-size: 0.75rem;
+}

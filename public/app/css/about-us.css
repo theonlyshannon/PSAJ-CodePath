@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+    padding-top: 9rem;
+}
+nav,
+.navbar {
+  padding: 24px 80px;
+  box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.navbar-brand {
+  padding-left: 0;
+  margin-right: auto;
+}
+
+.navbar-brand img {
+  max-height: 90px;
+}
+
+.navbar-nav {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+  color: #141B2A;
+  position: relative;
+}
+
+.nav-link {
+  color: #141B2A;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #135155;
+}
+.btn-custom {
+    background-color: #2F4157;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 12px 18px;
+  }
+
+  .btn-custom:hover {
+    background-color: #7892B0;
+    color: white;
+  }
+
+
+/* Hero Section */
+.hero {
+    background-color: #A7C7E7;
+    padding: 4rem 2rem;
+    text-align: center;
+    height: 350px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+
+
+.about-section {
+    padding: 80px 0;
+}
+
+.about-image-container {
+    position: relative;
+    max-width: 500px;
+}
+
+.about-image-main {
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.feature-item svg {
+    width: 20px;
+    height: 20px;
+    fill: #0d6efd;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    background-color: #e9f0ff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.stat-text {
+    font-size: 14px;
+    color: #666;
+}
+.testimonial-card {
+    background-color: #2C3E50;
+    border-radius: 25px;
+    padding: 40px;
+    color: white;
+    max-width: 350px;
+    position: relative;
+    margin: 20px;
+}
+
+.testimonial-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-title {
+    font-size: 18px;
+    color: #A9B4BE;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.star-rating {
+    color: #FFD700;
+    font-size: 20px;
+}

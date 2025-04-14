@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+    padding-top: 9rem;
+}
+
+nav,
+.navbar {
+  padding: 24px 80px;
+  box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.navbar-brand {
+  padding-left: 0;
+  margin-right: auto;
+}
+
+.navbar-brand img {
+  max-height: 90px;
+}
+
+.navbar-nav {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+  color: #141B2A;
+  position: relative;
+}
+
+.nav-link {
+  color: #141B2A;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #135155;
+}
+
+/* Style untuk dropdown */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  padding: 8px 20px;
+  color: #141B2A;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #2E8C93;
+}
+
+.dropdown-divider {
+  margin: 8px 0;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Style untuk nama user di dropdown */
+.nav-item.dropdown .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-item.dropdown .dropdown-toggle::after {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Style untuk tombol logout */
+.dropdown-item[type="submit"] {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-item[type="submit"]:hover {
+  background-color: #f8f9fa;
+  color: #2E8C93;
+}
+
+.btn-custom {
+  background-color: #2F4157;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 12px 18px;
+}
+
+.btn-custom:hover {
+  background-color: #7892B0;
+  color: white;
+}
+
+/* Search Courses Section Styles */
+.search-courses-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Search Title */
+.search-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Bar Styles */
+.search-bar-wrapper {
+  flex-grow: 1;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.search-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.search-button:hover {
+  background-color: #34495e;
+}
+
+.learn-more-button {
+  background-color: #6c90a8;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.learn-more-button:hover {
+  background-color: #5a7a8e;
+}
+
+/* Benefits Image Grid */
+.benefits-image-container {
+  padding: 20px;
+  border: 1px dashed #ccc;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.benefits-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.benefits-image-grid {
+  aspect-ratio: 1;
+  max-width: 100%;
+}
+
+/* Hapus style yang tidak diperlukan */
+.image-placeholder,
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  display: none;
+}
+
+/* Benefits Content */
+.benefits-content {
+  padding-left: 20px;
+}
+
+.benefits-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.benefit-highlight {
+  color: #6c90a8;
+}
+
+/* Benefit Items */
+.benefit-item {
+  margin-bottom: 30px;
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #2c3e50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-icon i {
+  color: white;
+  font-size: 28px;
+}
+
+.benefit-text h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.benefit-text p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+        /* Custom CSS to match the design */
+        .course-card {
+          border-radius: 15px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+      }
+
+      .course-card:hover {
+          transform: scale(1.05);
+      }
+
+      .course-card .card-img-top {
+          height: 200px;
+          object-fit: cover;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+      }
+
+      .course-rating {
+          color: #f39c12;
+          font-weight: bold;
+      }
+
+      .course-instructor-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+      }
+
+      .course-header {
+          text-align: center;
+          margin-bottom: 30px;
+      }
+
+
+  /* hero section */
+
+  .hero-section {
+    background-color: #2d4056;
+    color: white;
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    color: #8ebad1;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 0.95rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.hero-btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 500;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-find-course {
+    background-color: #80a7b8;
+    border: none;
+    color: white;
+}
+
+.btn-find-course:hover {
+    background-color: #6b8e9e;
+}
+
+.btn-learn-more {
+    background-color: transparent;
+    border: 1px solid #80a7b8;
+    color: white;
+}
+
+.btn-learn-more:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-image-container {
+    position: relative;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+.floating-element {
+    position: absolute;
+    z-index: 3;
+}
+
+.floating-element.google {
+    top: 15%;
+    right: 15%;
+    transform: rotate(10deg);
+}
+
+.floating-element.whatsapp {
+    top: 30%;
+    left: 10%;
+    transform: rotate(-15deg);
+}
+
+.floating-element.phone {
+    top: 45%;
+    left: 15%;
+}
+
+.floating-element.team {
+    top: 60%;
+    right: 15%;
+}
+
+.floating-element.dev {
+    bottom: 15%;
+    left: 20%;
+}
+
+.floating-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    vertical-align: middle;
+}
+
+/* Circle with image */
+.img-circle-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .benefits-image-container {
+    padding: 15px;
+  }
+
+  .benefits-image-grid {
+    aspect-ratio: 16/9;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+}
+.hero-subtitle {
+    font-size: 2rem;
+}
+.hero-description {
+    font-size: 0.9rem;
+}
+.img-circle-container {
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+}
+.floating-element {
+    display: none;
+}
+}
+
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 2rem;
+  }
+
+  .benefits-image-container {
+    padding: 10px;
+  }
+
+  .benefits-content h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-button,
+  .learn-more-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .benefit-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .benefit-icon i {
+    font-size: 24px;
+  }
+}

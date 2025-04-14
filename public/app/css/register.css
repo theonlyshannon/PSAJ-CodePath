@@ -1,0 +1,39 @@
+body {
+    background-image: url('../public/register-bg.png'); /* Ganti dengan path gambar yang diinginkan */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.login-container {
+    background-color: rgba(244, 240, 235, 0.9); /* Menambahkan transparansi untuk melihat latar belakang */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 650px;
+    max-width: 600px;
+    text-align: center;
+}
+.login-container h2 {
+    font-weight: bold;
+}
+.btn-login {
+    background-color: #2D1B46;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-login:hover {
+    background-color: #3A2757;
+}
+.form-control {
+    border-radius: 8px;
+    background: #fff;
+}
