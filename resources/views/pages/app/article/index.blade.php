@@ -12,34 +12,38 @@
                 <!-- Article Cards -->
                 <div class="col-lg-8">
                     <div class="row">
-                        <!-- Article Card 1 -->
-                        @foreach ($articles as $article)
-                            <div class="col-md-6 mb-4">
-                                <div class="card h-100">
-                                    <img src="{{ asset($article->thumbnail) }}" alt="{{ $article->title }}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $article->created_at }}</h5>
-                                        <p class="card-text text-muted">
-                                            {{ \Illuminate\Support\Str::limit($article->content, 100, '...') }}
-                                        </p>
-                                        <a href="{{ route('app.article.show', $article->slug) }}"
-                                            class="btn btn-outline-primary">
-                                            Read Now
-                                        </a>
+                        <!-- Check if articles are available -->
+                        @if($articles->isEmpty())
+                            <p class="text-center">Tidak ada artikel yang tersedia.</p>
+                        @else
+                            @foreach ($articles as $article)
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100" data-aos="fade-up">
+                                        <img src="{{ asset($article->thumbnail) }}" alt="{{ $article->title }}">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ $article->created_at }}</h5>
+                                            <p class="card-text text-muted">
+                                                {{ \Illuminate\Support\Str::limit($article->content, 100, '...') }}
+                                            </p>
+                                            <a href="{{ route('app.article.show', $article->slug) }}"
+                                                class="btn btn-outline-primary">
+                                                Read Now
+                                            </a>
 
-                                        <!-- Writer Information -->
-                                        <div class="writer-info">
-                                            <img src="{{ asset('app/image/Index/image.png') }}" class="writer-avatar"
-                                                alt="Writer Avatar">
-                                            <div class="writer-details mt-3">
-                                                <p class="writer-name">{{ $article->writer->name }}</p>
-                                                <p class="writer-role">{{ $article->created_at }}</p>
+                                            <!-- Writer Information -->
+                                            <div class="writer-info">
+                                                <img src="{{ asset('app/image/Index/image.png') }}" class="writer-avatar"
+                                                    alt="Writer Avatar">
+                                                <div class="writer-details mt-3">
+                                                    <p class="writer-name">{{ $article->writer->name }}</p>
+                                                    <p class="writer-role">{{ $article->created_at }}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
                     </div>
 
                     <!-- Pagination -->

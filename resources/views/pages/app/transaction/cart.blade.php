@@ -362,7 +362,7 @@
             <div class="row gutter-y-50">
                 <div class="col-xl-8">
                     @if ($cartItems->isEmpty())
-                        <div class="cart-card">
+                        <div class="cart-card d-flex justify-content-center">
                             <div class="cart-card-body empty-cart">
                                 <div class="empty-cart__icon">
                                     <i class="icon-basket"></i>

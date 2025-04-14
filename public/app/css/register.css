@@ -1,5 +1,5 @@
 body {
-    background-image: url('../public/register-bg.png'); /* Ganti dengan path gambar yang diinginkan */
+    background-image: url('../image/register-bg.png'); /* Ganti dengan path gambar yang diinginkan */
     background-size: cover;
     background-position: center;
     display: flex;

@@ -13,7 +13,7 @@
                         Seperti Pengembangan Aplikasi, Keamanan Siber, Dan Rekayasa Perangkat Lunak.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn hero-btn btn-find-course">Find Course <span>&rarr;</span></a>
+                        <a href="{{ route('app.course.index') }}" class="btn hero-btn btn-find-course">Find Course <span>&rarr;</span></a>
                         <a href="#" class="btn hero-btn btn-learn-more">Learn More <span>&rarr;</span></a>
                     </div>
                 </div>
@@ -24,15 +24,6 @@
                         <div class="img-circle-container">
                             <div class="hero-circle"></div>
                             <img src="{{ asset('app/image/Index/hero-image.png') }}" alt="Student" class="hero-image">
-                        </div>
-
-                        <!-- Floating Elements -->
-                        <div class="floating-element google">
-                            <img src="{{ asset('app/image/Index/google-icon.png') }}" alt="Google Icon">
-                        </div>
-
-                        <div class="floating-element whatsapp">
-                            <img src="{{ asset('app/image/Index/whatsapp-icon.png') }}" alt="WhatsApp Icon">
                         </div>
 
                         <div class="floating-element phone">

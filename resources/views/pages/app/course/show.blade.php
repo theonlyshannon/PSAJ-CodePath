@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 mx-auto">
-                        {{ $course->description }}
+                        {!! $course->description !!}
                     </div>
                 </div>
             </div>
@@ -106,11 +106,6 @@
                                         </div>
                                         <div class="text-muted">Indonesian</div>
                                     </div>
-
-                                    <div class="course-details__info__price">
-                                        This course Fee Rp{{ number_format($course->price, 0, ',', '.') }}
-                                    </div>
-
                                     @if (!Auth::check())
                                         <!-- Belum login -->
                                         <div class="d-grid my-3">
@@ -140,7 +135,7 @@
                                         </div>
                                     @else
                                         <div class="d-grid my-3">
-                                            <a href="" class="btn btn-lg btn-success rounded-3 w-100">
+                                            <a href="{{ route('app.course.course', $course->slug) }}" class="btn btn-lg btn-success rounded-3 w-100">
                                                 Masuk ke Kelas
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                     class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">

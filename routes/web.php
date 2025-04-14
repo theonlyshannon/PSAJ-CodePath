@@ -42,6 +42,7 @@ Route::name('app.')->middleware(['update.last.active'])->group(function () {
     Route::prefix('kelas')->name('course.')->group(function () {
         Route::get('/', [CourseController::class, 'index'])->name('index');
         Route::get('/{slug}', [CourseController::class, 'show'])->name('show');
+        Route::get('/{slug}/ruangan', [CourseController::class, 'course'])->name('course');
         Route::post('/{id}/review', [CourseController::class, 'review'])->name('review.store');
     });
 

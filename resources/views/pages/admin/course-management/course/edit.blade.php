@@ -310,7 +310,7 @@
             });
         </script>
 
-{{-- <script src="https://cdn.tiny.cloud/1/{{ env('TINYMCE_API_KEY') }}/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/3fwzm799wa7ksr848sl1hk39p48msamo7ejrsdgdpykd7tze/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
         selector: 'textarea.tinymce',
@@ -329,6 +329,6 @@
         },
         menubar: 'favs file edit view insert format tools table help',
     });
-</script> --}}
+</script>
     @endpush
 </x-layouts.admin>

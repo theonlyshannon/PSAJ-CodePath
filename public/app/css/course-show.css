@@ -3,69 +3,71 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
-  }
+}
 
-  body {
+body {
     padding-top: 9rem;
-}}
+}
 
-  nav,
-  .navbar {
+nav,
+.navbar {
     padding: 24px 80px;
     box-shadow: 0 25px 25px rgba(35, 35, 35, 0.04);
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
     font-family: 'poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
     width: 100%;
-  }
+}
 
-  .navbar-brand {
+.navbar-brand {
     padding-left: 0;
     margin-right: auto;
-  }
+}
 
-  .navbar-brand img {
+.navbar-brand img {
     max-height: 90px;
-  }
+}
 
-  .navbar-nav {
+.navbar-nav {
     flex-grow: 0;
     margin-left: auto;
-  }
+}
 
-  .nav-item {
+.nav-item {
     margin: 0 0.5rem;
-    color: #141B2A;
+    color: #2F4156; /* Navy color */
     position: relative;
-  }
+}
 
-  .nav-link {
-    color: #141B2A;
+.nav-link {
+    color: #2F4156; /* Navy color */
     padding: 0.5rem 1rem;
-  }
+}
 
-  .nav-link:hover {
-    color: #135155;
-  }
-  .btn-custom {
-    background-color: #2F4157;
+.nav-link:hover {
+    color: #567C8D; /* Teal color */
+}
+
+.btn-custom {
+    background-color: #2F4156; /* Navy color */
     color: white;
     border: none;
     padding: 8px 24px;
     border-radius: 4px;
     font-weight: 500;
     padding: 12px 18px;
-  }
-  .btn-custom:hover {
-    background-color: #7892B0;
-    color: white;
-  }
+}
 
-  /* Hero Section */
+.btn-custom:hover {
+    background-color: #567C8D; /* Teal color */
+    color: white;
+}
+
+/* Hero Section */
 .hero {
-    background-color: #2F4157;
+    background-color: #2F4156; /* Navy color */
     padding: 4rem 2rem;
     text-align: center;
     height: 350px;
@@ -81,19 +83,22 @@
 .course-info {
     padding: 20px 0;
 }
+
 .instructor {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    color: #6c757d;
+    color: #567C8D; /* Teal color */
 }
+
 .classes-info {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #6c757d;
+    color: #567C8D; /* Teal color */
 }
+
 .course-img {
     border-radius: 8px;
     overflow: hidden;
@@ -101,53 +106,60 @@
     max-height: 100%;
     height: 620px;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(47, 65, 86, 0.15); /* Shadow with Navy color */
     margin-bottom: 30px;
 }
+
 .description {
-    background-color: #fff;
+    background-color: #FFF; /* White */
     padding: 40px 0;
 }
+
 .description h2 {
     font-weight: 600;
     margin-bottom: 25px;
+    color: #2F4156; /* Navy color */
 }
+
 .description p {
-    color: #6c757d;
+    color: #567C8D; /* Teal color */
     line-height: 1.7;
     margin-bottom: 25px;
 }
+
 .tech-stack h3 {
     font-weight: 500;
     margin-bottom: 15px;
-    color: #495057;
+    color: #2F4156; /* Navy color */
 }
+
 .tech-stack ul {
     padding-left: 20px;
 }
+
 .tech-stack li {
     margin-bottom: 8px;
-    color: #6c757d;
+    color: #567C8D; /* Teal color */
 }
 
 /* Reviews Section Styling */
 .reviews-section {
     padding: 40px 0;
-    background-color: #f8f9fa;
+    background-color: #C8D9E6; /* Sky Blue color */
 }
 
 .review-form {
-    background-color: white;
+    background-color: #FFF; /* White */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(47, 65, 86, 0.1); /* Shadow with Navy color */
 }
 
 .reviews-container {
-    background-color: white;
+    background-color: #FFF; /* White */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(47, 65, 86, 0.1); /* Shadow with Navy color */
 }
 
 .reviews-list {
@@ -161,27 +173,27 @@
 }
 
 .reviews-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #F5EFEB; /* Beige color */
     border-radius: 3px;
 }
 
 .reviews-list::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #567C8D; /* Teal color */
     border-radius: 3px;
 }
 
 .review-card {
-    border: 1px solid #e0e0e0;
+    border: 1px solid #C8D9E6; /* Sky Blue color */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: #FFF; /* White */
     transition: transform 0.2s ease;
 }
 
 .review-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(47, 65, 86, 0.15); /* Shadow with Navy color */
 }
 
 .review-header {
@@ -195,21 +207,21 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0;
-    color: #2E8C93;
+    color: #567C8D; /* Teal color */
 }
 
 .rating {
-    color: #ffc107;
+    color: #2F4156; /* Navy color */
     font-size: 0.9rem;
 }
 
 .review-text {
-    color: #6c757d;
+    color: #567C8D; /* Teal color */
     margin-bottom: 10px;
     line-height: 1.5;
 }
 
 .review-date {
     font-size: 0.8rem;
-    color: #999;
+    color: #000; /* Sky Blue color - slightly darker */
 }

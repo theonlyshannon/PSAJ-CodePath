@@ -186,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center mt-4">
+            <div class="d-flex justify-content-center mt-4 mb-5">
                 <button class="btn btn-custom mx-2" type="button" data-bs-target="#testimonialCarousel"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -20,36 +20,48 @@ class ArticleSeeder extends Seeder
     {
         $imageHelper = new ImageHelper();
 
-        for ($i = 0; $i < 50; $i++) {  // Tambahkan lebih banyak artikel untuk variasi
-            $writer = Writer::inRandomOrder()->first();
+        // Dapatkan semua writer, category, dan tag yang tersedia
+        $writers = Writer::all();
+        $categories = ArticleCategory::all();
+        $tags = ArticleTag::all();
+
+        if ($writers->isEmpty()) {
+            throw new \Exception('Tidak ada writer tersedia. Pastikan WriterSeeder sudah dijalankan.');
+        }
+
+        if ($categories->isEmpty() || $tags->isEmpty()) {
+            throw new \Exception('Categories atau Tags kosong. Pastikan ArticleCategorySeeder dan ArticleTagSeeder sudah dijalankan.');
+        }
+
+        for ($i = 0; $i < 50; $i++) {
+            $writer = $writers->random();
 
             // Generate tanggal acak dalam rentang 90 hari terakhir
             $randomDate = Carbon::now()
-                ->subDays(rand(1, 90))  // Rentang 1 hingga 90 hari terakhir
-                ->setHour(rand(0, 23))  // Jam acak
-                ->setMinute(rand(0, 59))  // Menit acak
-                ->setSecond(rand(0, 59));  // Detik acak
+                ->subDays(rand(1, 90))
+                ->setHour(rand(0, 23))
+                ->setMinute(rand(0, 59))
+                ->setSecond(rand(0, 59));
 
-            $articles = Article::factory()
-                ->for($writer)
+            $article = Article::factory()
                 ->create([
+                    'writer_id' => $writer->id,
                     'thumbnail' => $imageHelper
                         ->createDummyImageWithTextSizeAndPosition(
                             1920, 1080, 'center', 'center', 'random', 'medium'
                         )->store('assets/article/thumbnail', 'public'),
-
-                    // Set created_at dan updated_at dengan tanggal dan waktu acak
                     'created_at' => $randomDate,
                     'updated_at' => $randomDate,
                 ]);
 
-            // Attach categories dan tags secara acak
-            $articles->categories()->attach(
-                ArticleCategory::inRandomOrder()->limit(rand(1, 3))->get()
+            // Attach random categories (1-3)
+            $article->categories()->attach(
+                $categories->random(rand(1, 3))->pluck('id')->toArray()
             );
 
-            $articles->tags()->attach(
-                ArticleTag::inRandomOrder()->limit(rand(1, 3))->get()
+            // Attach random tags (1-3)
+            $article->tags()->attach(
+                $tags->random(rand(1, 3))->pluck('id')->toArray()
             );
         }
     }

@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- favicons Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('app/images/android-chrome-192x192.png') }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('app/images/android-chrome-512x512.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('app/image/icon.png') }}" />
     <link rel="manifest" href="{{ asset('app/images/favicons/site.webmanifest') }}" />
 
     <link rel="stylesheet" href="{{ asset('app/css/login.css') }}">

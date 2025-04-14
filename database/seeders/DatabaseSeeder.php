@@ -18,19 +18,20 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             AccountSeeder::class,
             MentorSeeder::class,
-            WriterSeeder::class,
-            StudentSeeder::class
+            // WriterSeeder::class,
+            // StudentSeeder::class
         ]);
 
         if ($env === 'local') {
             $this->call([
-                ArticleTagSeeder::class,
+                WriterSeeder::class,
                 ArticleCategorySeeder::class,
+                ArticleTagSeeder::class,
                 ArticleSeeder::class,
-                ArticleVisitorSeeder::class,
+                // ArticleVisitorSeeder::class,
 
-                UniversitySeeder::class,
-                FacultySeeder::class,
+                // UniversitySeeder::class,
+                // FacultySeeder::class,
 
                 // CourseCategorySeeder::class,
                 // CourseSeeder::class,

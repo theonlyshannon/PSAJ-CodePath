@@ -28,4 +28,9 @@ class Transaction extends Model
     {
         return $this->hasMany(TransactionDetail::class);
     }
+
+    public function isPending()
+    {
+        return $this->status === 'pending';
+    }
 }

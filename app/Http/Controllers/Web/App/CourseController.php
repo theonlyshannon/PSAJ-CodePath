@@ -69,4 +69,19 @@ class CourseController extends Controller
 
         return view('pages.app.course.show', compact('course', 'hasAccess', 'reviews'));
     }
+
+    public function course($slug)
+    {
+        $course = $this->courseRepository->getCourseBySlug($slug);
+        $syllabus = $course->syllabus()->orderBy('sort')->get();
+
+        $user = Auth::user();
+        $hasAccess = false;
+
+        if ($user) {
+            $hasAccess = $user->hasPurchasedCourse($course->id);
+        }
+
+        return view('pages.app.course.class', compact('course', 'hasAccess', 'syllabus'));
+    }
 }

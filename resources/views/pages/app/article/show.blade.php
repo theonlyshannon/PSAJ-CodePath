@@ -13,7 +13,7 @@
                     <div class="article-content">
                         <!-- Writer Info -->
                         <div class="writer-info">
-                            <img src="{{ asset('app/image/Index/image.png0') }}" alt="{{ $article->writer->name }}" class="writer-avatar">
+                            <img src="{{ asset('app/image/Index/image.png') }}" alt="{{ $article->writer->name }}" class="writer-avatar">
                             <div class="writer-details">
                                 <p class="writer-name">{{ $article->writer->name }}</p>
                                 <p class="writer-role">{{ $article->writer->role }}</p>
@@ -42,27 +42,6 @@
                         </div>
                     </div>
 
-                    <!-- Comment Section -->
-                    <div class="comment-form mt-4">
-                        <h4>Leave a Comment</h4>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" placeholder="Your Name">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" placeholder="Your Email">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Comment</label>
-                                <textarea class="form-control" rows="5" placeholder="Your Comment"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit Comment</button>
-                        </form>
-                    </div>
                 </div>
 
                 <!-- Sidebar -->
@@ -110,7 +89,7 @@
                             <div class="recent-article">
                                 <img src="{{ asset($article->thumbnail) }}" alt="Recent Article" class="recent-article-thumbnail">
                                 <div>
-                                    <h6 class="mb-1">{{ $article->title }}</h6>
+                                    <a href="{{ route('app.article.show', $article->slug) }}" class="mb-1" style="font-size: 17px; text-decoration: none; color: black;">{{ $article->title }}</a>
                                     <small class="text-muted">March 10, 2024</small>
                                 </div>
                             </div>

@@ -77,9 +77,10 @@ class User extends Authenticatable
     public function hasPurchasedCourse($courseId)
     {
         return $this->transactions()
-            ->whereIn('status', ['paid', 'success'])
-            ->whereHas('transactionDetails', function ($query) use ($courseId) {
+            ->where('status', 'success')
+            ->whereHas('transactionDetails', function($query) use ($courseId) {
                 $query->where('course_id', $courseId);
-            })->exists();
+            })
+            ->exists();
     }
 }

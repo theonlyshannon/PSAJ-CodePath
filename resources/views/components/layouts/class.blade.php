@@ -12,13 +12,15 @@
     </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- favicons Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('app/image/icon.png') }}" />
     <link rel="manifest" href="{{ asset('app/images/favicons/site.webmanifest') }}" />
 
-    <link rel="stylesheet" href="{{ asset('app/css/article-show.css') }}">
+    <link rel="stylesheet" href="{{ asset('app/css/class.css') }}">
 
 
 
@@ -35,13 +37,11 @@
 
     {{-- navbar --}}
     <div class="page-wrapper">
-    <x-ui.app-header/>
 
     <main>
         {{ $slot }}
     </main>
 
-    <x-ui.app-footer/>
     </div>
 
 

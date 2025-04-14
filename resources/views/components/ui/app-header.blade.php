@@ -33,7 +33,11 @@
                 {{ $student->name ?? Auth::user()->email }}
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#client">Kelas Saya</a></li>
+              @role('admin')
+                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+              @else
+                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Kelas Saya</a></li>
+              @endrole
               <li><hr class="dropdown-divider"></li>
               <li>
                 <form action="{{ route('logout') }}" method="POST">
