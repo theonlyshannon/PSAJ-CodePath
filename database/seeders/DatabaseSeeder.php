@@ -24,10 +24,10 @@ class DatabaseSeeder extends Seeder
 
         if ($env === 'local') {
             $this->call([
-                WriterSeeder::class,
-                ArticleCategorySeeder::class,
-                ArticleTagSeeder::class,
-                ArticleSeeder::class,
+                // WriterSeeder::class,
+                // ArticleCategorySeeder::class,
+                // ArticleTagSeeder::class,
+                // ArticleSeeder::class,
                 // ArticleVisitorSeeder::class,
 
                 // UniversitySeeder::class,

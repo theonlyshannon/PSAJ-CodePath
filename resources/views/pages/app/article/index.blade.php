@@ -21,7 +21,7 @@
                                     <div class="card h-100" data-aos="fade-up">
                                         <img src="{{ asset($article->thumbnail) }}" alt="{{ $article->title }}">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{ $article->created_at }}</h5>
+                                            <h5 class="card-title">{{ $article->title }}</h5>
                                             <p class="card-text text-muted">
                                                 {{ \Illuminate\Support\Str::limit($article->content, 100, '...') }}
                                             </p>
