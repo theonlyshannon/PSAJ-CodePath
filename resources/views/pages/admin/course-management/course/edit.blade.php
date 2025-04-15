@@ -82,19 +82,6 @@
                                                 id="syllabus-title-{{ $index }}"
                                                 value="{{ old('syllabus.' . $index . '.title', $syllabus->title) }}">
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="syllabus-file-{{ $index }}">File (DOCX/PDF)</label>
-                                            @if ($syllabus->file)
-                                                <input type="file" class="form-control" accept=".doc,.docx,.pdf"
-                                                    name="syllabus[{{ $index }}][file]"
-                                                    id="syllabus-file-{{ $index }}"
-                                                    value="{{ asset('public/' . $syllabus->file) }}">
-                                            @else
-                                                <input type="file" class="form-control" accept=".doc,.docx,.pdf"
-                                                    name="syllabus[{{ $index }}][file]"
-                                                    id="syllabus-file-{{ $index }}">
-                                            @endif
-                                        </div>
                                         <div id="syllabus-video-preview-{{ $index }}" class="mb-3"
                                             style="display: {{ $syllabus->video ? 'block' : 'none' }};">
                                             <label for="syllabus-video-preview-{{ $index }}">Preview
