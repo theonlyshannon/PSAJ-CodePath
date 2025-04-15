@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +18,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('app/image/icon.png') }}" />
     <link rel="manifest" href="{{ asset('app/images/favicons/site.webmanifest') }}" />
 
-    <link rel="stylesheet" href="{{ asset('app/css/course-show.css') }}">
+    <link rel="stylesheet" href="{{ asset('app/css/course-show.css?v=' . time()) }}">
 
 
 

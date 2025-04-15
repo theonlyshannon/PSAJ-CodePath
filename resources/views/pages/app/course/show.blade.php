@@ -21,6 +21,9 @@
                             </svg>
                             <span>{{ $course->syllabus->count() }} Materi</span>
                         </div>
+                        <div class="category-info">
+                            <span>Kategori: {{ $course->category }}</span>
+                        </div>
                     </div>
                     <div class="course-img">
                         <iframe width="100%" height="500" src="{{ $course->trailer }}" title="HTML Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="img-fluid"></iframe>
@@ -91,7 +94,7 @@
                                             </svg>
                                             <span>Certifications:</span>
                                         </div>
-                                        <div class="text-muted">Yes</div>
+                                        <div class="text-muted">No</div>
                                     </div>
 
                                     <div
@@ -109,7 +112,7 @@
                                     @if (!Auth::check())
                                         <!-- Belum login -->
                                         <div class="d-grid my-3">
-                                            <a href="{{ route('login') }}" class="btn btn-lg btn-primary rounded-3 w-100">
+                                            <a href="{{ route('login') }}" class="btn btn-lg btn-custom rounded-3 w-100">
                                                 Login Untuk Bergabung
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                     class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
@@ -123,7 +126,7 @@
                                         <div class="d-grid my-3">
                                             <form action="{{ route('app.cart.add', $course->id) }}" method="POST">
                                                 @csrf
-                                                <button type="submit" class="btn btn-lg btn-primary rounded-3 w-100">
+                                                <button type="submit" class="btn btn-lg btn-class rounded-3 w-100">
                                                     Checkout Kelas Ini - Rp.{{ number_format($course->price, 0, ',', '.') }}
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                         class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
@@ -135,7 +138,7 @@
                                         </div>
                                     @else
                                         <div class="d-grid my-3">
-                                            <a href="{{ route('app.course.course', $course->slug) }}" class="btn btn-lg btn-success rounded-3 w-100">
+                                            <a href="{{ route('app.course.course', $course->slug) }}" class="btn btn-lg btn-class rounded-3 w-100">
                                                 Masuk ke Kelas
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                                     class="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
@@ -153,93 +156,4 @@
                 </div>
             </section>
 
-        <!-- Reviews Section -->
-        <section class="reviews-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <h2 class="mb-4">Course Reviews</h2>
-                        <!-- Reviews List -->
-                        <div class="reviews-container  mb-5">
-                            <h3 class="h5 mb-4">Student Reviews</h3>
-                            <div class="reviews-list">
-                                <!-- Review Card 1 -->
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <h4 class="reviewer-name">Ahmad Syafiq</h4>
-                                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                                    </div>
-                                    <p class="review-text">Kursus yang sangat bagus dan informatif. Materi dijelaskan dengan sangat detail dan mudah dipahami. Instruktur sangat membantu dalam proses pembelajaran.</p>
-                                    <div class="review-date">Posted on: 15 Mar 2024</div>
-                                </div>
-
-                                <!-- Review Card 2 -->
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <h4 class="reviewer-name">Siti Nurhaliza</h4>
-                                        <div class="rating">⭐⭐⭐⭐</div>
-                                    </div>
-                                    <p class="review-text">Materi yang diberikan sangat terstruktur dan mudah diikuti. Saya belajar banyak hal baru tentang HTML dari kursus ini.</p>
-                                    <div class="review-date">Posted on: 14 Mar 2024</div>
-                                </div>
-
-                                <!-- Review Card 3 -->
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <h4 class="reviewer-name">Budi Santoso</h4>
-                                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                                    </div>
-                                    <p class="review-text">Kursus yang luar biasa! Saya yang awalnya pemula dalam HTML sekarang sudah bisa membuat website sendiri. Terima kasih CodePath!</p>
-                                    <div class="review-date">Posted on: 13 Mar 2024</div>
-                                </div>
-                                <!-- Review Card 3 -->
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <h4 class="reviewer-name">Budi Santoso</h4>
-                                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                                    </div>
-                                    <p class="review-text">Kursus yang luar biasa! Saya yang awalnya pemula dalam HTML sekarang sudah bisa membuat website sendiri. Terima kasih CodePath!</p>
-                                    <div class="review-date">Posted on: 13 Mar 2024</div>
-                                </div>
-                                <!-- Review Card 3 -->
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <h4 class="reviewer-name">Budi Santoso</h4>
-                                        <div class="rating">⭐⭐⭐⭐⭐</div>
-                                    </div>
-                                    <p class="review-text">Kursus yang luar biasa! Saya yang awalnya pemula dalam HTML sekarang sudah bisa membuat website sendiri. Terima kasih CodePath!</p>
-                                    <div class="review-date">Posted on: 13 Mar 2024</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Review Form -->
-                        <div class="review-form">
-                            <h3 class="h5 mb-3">Add Your Review</h3>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="reviewerName" class="form-label">Nama</label>
-                                    <input type="text" class="form-control" id="reviewerName" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="rating" class="form-label">Rating</label>
-                                    <select class="form-select" id="rating" required>
-                                        <option value="">Pilih rating</option>
-                                        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-                                        <option value="4">⭐⭐⭐⭐ (4)</option>
-                                        <option value="3">⭐⭐⭐ (3)</option>
-                                        <option value="2">⭐⭐ (2)</option>
-                                        <option value="1">⭐ (1)</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="reviewText" class="form-label">Review</label>
-                                    <textarea class="form-control" id="reviewText" rows="3" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit Review</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 </x-layouts.course-show>

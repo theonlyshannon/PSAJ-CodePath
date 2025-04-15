@@ -157,12 +157,12 @@
                             <span class="text-muted">Rp. {{ number_format($course->price, 0, ',', '.') }}</span>
                         </div>
                         <h5 class="card-title">
-                            <a href="{{ route('app.course.show', $course->slug) }}">
+                            <a href="{{ route('app.course.show', $course->slug) }}" class="course-link">
 
                                 {{ $course->title }}
                             </a>
                         </h5>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center mentor-info">
                             <img src="{{ asset('app/image/Index/image.png') }}" class="course-instructor-img" alt="Instructor">
                             <span>{{ $course->mentor->name }}</span>
                         </div>

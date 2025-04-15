@@ -4,11 +4,11 @@
     @push('app-style')
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #0ea5e9;
-            --light: #f8fafc;
-            --dark: #1e293b;
+            --primary: #2F4156;         /* Navy */
+    --primary-dark: #567C8D;    /* Teal */
+    --secondary: #C8D9E6;       /* Sky Blue */
+    --light: #F5EEEB;           /* Beige */
+    --dark: #2F4156;
         }
 
         .cart-page {
@@ -359,7 +359,7 @@
                 <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
 
-            <div class="row gutter-y-50">
+            <div class="row gutter-y-50 pt-5">
                 <div class="col-xl-8">
                     @if ($cartItems->isEmpty())
                         <div class="cart-card d-flex justify-content-center">

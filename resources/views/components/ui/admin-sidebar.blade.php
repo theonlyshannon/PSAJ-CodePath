@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        {{-- <img src="{{ asset('admin/assets/images/Unipath.png') }}" class="sidebar-brand" width="150"> --}}
+        <img src="{{ asset('app/image/logo-codepath.png') }}" class="sidebar-brand" width="150">
         <div class="sidebar-toggler not-active">
             <span></span>
             <span></span>
@@ -146,14 +146,14 @@
                                 </li>
                             @endcan
 
-                            @can('course-review-list')
+                            {{-- @can('course-review-list')
                                 <li class="nav-item">
                                     <a href="{{ route('admin.course-review.index') }}"
                                         class="nav-link {{ request()->is('admin/course-review*') ? ' active' : '' }}">
                                         Review Kelas
                                     </a>
                                 </li>
-                            @endcan
+                            @endcan --}}
 
                         </ul>
                     </div>

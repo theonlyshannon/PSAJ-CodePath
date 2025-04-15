@@ -34,7 +34,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               @role('admin')
-                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
               @else
                 <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Kelas Saya</a></li>
               @endrole

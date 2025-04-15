@@ -6,7 +6,7 @@
 }
 
 body {
-    padding-top: 9rem;
+    padding-top: 7rem;
 }
 
 nav,
@@ -27,7 +27,7 @@ nav,
 }
 
 .navbar-brand img {
-  max-height: 90px;
+  max-height: 70px;
 }
 
 .navbar-nav {
@@ -47,9 +47,8 @@ nav,
 }
 
 .nav-link:hover {
-  color: #135155;
-}
-
+    color: #80a7b8;
+  }
 /* Style untuk dropdown */
 .dropdown-menu {
   border: none;
@@ -67,7 +66,7 @@ nav,
 
 .dropdown-item:hover {
   background-color: #f8f9fa;
-  color: #2E8C93;
+  color: #80a7b8;
 }
 
 .dropdown-divider {
@@ -420,6 +419,15 @@ nav,
     margin: 0 auto;
 }
 
+.course-link {
+    text-decoration: none;
+    color: #2F4157;
+    font-size: 18px;
+}
+
+.mentor-info {
+    margin-top: 20px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
@@ -461,6 +469,52 @@ nav,
   .benefits-content h3 {
     font-size: 1.75rem;
   }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-8 {
+        margin-bottom: 2rem;
+    }
+
+    .article-sidebar {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav, .navbar {
+        padding: 24px 20px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .article-section {
+        padding: 2rem 0;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .category-badge, .tag-badge {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 576px) {

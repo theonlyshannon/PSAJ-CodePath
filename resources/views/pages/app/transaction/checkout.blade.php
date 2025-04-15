@@ -581,4 +581,25 @@
             </div>
         </div>
     </section>
+
+    @push('app-script')
+    <script>
+        // Fungsi untuk menangani response dari Midtrans
+        function handleMidtransResponse(result) {
+            if (result.status_code === '200' || result.status_code === '201') {
+                // Cek apakah ada URL redirect dari server
+                fetch('/api/check-payment-status/' + result.order_id)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.redirect_url) {
+                            window.location.href = data.redirect_url;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        }
+    </script>
+    @endpush
 </x-layouts.app>
