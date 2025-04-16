@@ -23,7 +23,7 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{ $article->title }}</h5>
                                             <p class="card-text text-muted">
-                                                {{ \Illuminate\Support\Str::limit($article->content, 100, '...') }}
+                                                {{ \Illuminate\Support\Str::limit(strip_tags($article->content), 100, '...') }}
                                             </p>
                                             <a href="{{ route('app.article.show', $article->slug) }}"
                                                 class="btn btn-outline-primary">
